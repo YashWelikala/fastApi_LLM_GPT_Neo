@@ -6,7 +6,7 @@ import torch
 # -------------------------------
 # Config
 # -------------------------------
-model_id = "yashWeli/energy-suggestions-gptneo-Finetune"
+model_id = "yashWeli/energy-suggestion-gptneo-Finetune"
 
 # Detect device
 device = 0 if torch.cuda.is_available() else -1
@@ -41,4 +41,5 @@ def generate_response(request: InferenceRequest):
         return {"output": output_text}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
 
